@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Link do Canal:" />
+    <EditText
+        android:id="@+id/linkCanalYoutube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o link" />
+
+
+    <ImageView
+        android:id="@+id/imagemCanalYoutube"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/bAdicionarImagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Imagem" />
+
+    <Button
+        android:id="@+id/bCadastrarCanal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF0D5"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RecuperarSenhaActivity"
+    tools:showIn="@layout/activity_recuperar_senha">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240px"
+        android:layout_marginTop="60px"
+        android:text="Esqueceu a senha?"
+        android:textColor="#F8180101"
+        android:textSize="26sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="250px"
+        android:text="E-mail"
+        android:textColor="#FC0A0000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtRecuperaSenha"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="10px"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FC0A0000" />
+
+
+    <Button
+        android:id="@+id/btnRecuperar"
+        android:layout_width="273dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="180px"
+        android:layout_marginTop="100px"
+        android:background="#D4A3EF"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Recuperar senha"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="273dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="180px"
+        android:layout_marginTop="100px"
+        android:background="#D4A3EF"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Cancelar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp" />
+
+</LinearLayout>

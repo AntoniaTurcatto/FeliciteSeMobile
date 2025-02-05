@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0D5"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CategoriaActivity"
+    tools:showIn="@layout/activity_categoria">
+
+
+    <TextView
+        android:id="@+id/tvCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50px"
+        android:text="Categorias"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#090000"
+        android:textSize="30sp"
+        app:fontFamily="serif" />
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Youtube"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+    android:id="@+id/bYoutube"
+        style="@style/EstiloBotao"
+        android:layout_marginTop="70px"
+        android:layout_marginBottom="25px">
+
+</Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filmes"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        style="@style/EstiloBotao"
+        android:id="@+id/bFilmes"
+        android:layout_marginBottom="25px">
+
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eventos"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        style="@style/EstiloBotao"
+        android:id="@+id/bEventos"
+        android:layout_marginBottom="25px">
+
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Séries"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        style="@style/EstiloBotao"
+        android:id="@+id/bSeries"
+        android:layout_marginBottom="25px">
+
+    </Button>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Livros"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        style="@style/EstiloBotao"
+        android:id="@+id/bLivros"
+        android:layout_marginBottom="25px">
+
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artigos"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        style="@style/EstiloBotao"
+        android:id="@+id/bArtigos"
+        android:layout_marginBottom="25px">
+
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplicativos"
+        style="@style/EstiloBotao"
+        android:id="@+id/bAplicativos"
+        android:layout_marginBottom="25px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px">
+
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Página Web"
+        android:id="@+id/bPaginaWeb"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        style="@style/EstiloBotao"
+       >
+
+    </Button>
+
+
+
+
+
+
+
+</LinearLayout>

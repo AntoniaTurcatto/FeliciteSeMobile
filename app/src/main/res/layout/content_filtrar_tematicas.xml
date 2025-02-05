@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".FiltrarTematicasActivity"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:showIn="@layout/activity_filtrar_tematicas">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Visualizar todos os conteúdos"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        style="@style/EstiloBotao"
+        android:id="@+id/bVisualizarTodosConteudos"
+        android:layout_marginTop="50px"
+        android:layout_marginBottom="25px">
+
+    </Button>
+
+    <Button
+        android:id="@+id/bSugerirConteudo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sugerir conteudos"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="50px"
+        android:layout_marginBottom="25px"
+        style="@style/EstiloBotao"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha aqui por qual temática deseja filtrar"
+        android:textSize="23sp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="50px"
+        android:layout_marginTop="50px"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvTematicas"/>
+</LinearLayout>

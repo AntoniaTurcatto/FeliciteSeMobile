@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ConfiguracaoActivity"
+    tools:showIn="@layout/activity_configuracao">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="380px"
+        android:layout_marginTop="50px"
+        android:singleLine="false"
+        android:text="Configurações"
+        android:textColor="#FD0A0000"
+        android:textSize="22sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/tvcomfirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="50px"
+        android:text="Nome"
+        android:textColor="#130303"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:text="Gênero"
+        android:textColor="#0E0000"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgSexo">
+
+        <RadioButton
+            android:id="@+id/rbFem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:text="Feminino"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/rbMasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="380px"
+            android:layout_marginTop="-85px"
+            android:layout_marginBottom="150px"
+            android:layout_weight="1"
+            android:text="Masculino"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/rbOutro"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="750px"
+            android:layout_marginTop="-235px"
+            android:layout_weight="1"
+            android:text="Outro"
+            android:textSize="19sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="-100px"
+        android:text="É estudante do if?"
+        android:textColor="#0E0000"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgAluno">
+
+        <RadioButton
+            android:id="@+id/rbSim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:text="Sim"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/rbNao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="380px"
+            android:layout_marginTop="-85px"
+            android:layout_marginBottom="150px"
+            android:layout_weight="1"
+            android:text="Não"
+            android:textSize="19sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="-100px"
+        android:text="E-mail"
+        android:textColor="#130303"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tvsenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="50px"
+        android:text="Senha"
+        android:textColor="#130303"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tvcomfirmarsenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="50px"
+        android:text="Comfirmar Senha"
+        android:textColor="#130303"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtConfirmarSenha"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="289dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="150px"
+        android:layout_marginTop="20px"
+        android:background="#D4A3EF"
+        android:text="Salvar Alterações"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FA1A0202"
+        android:textSize="22sp" />
+</LinearLayout>

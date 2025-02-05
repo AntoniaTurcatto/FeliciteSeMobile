@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0D5"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".JornadaActivity"
+    tools:showIn="@layout/activity_jornada">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="400px"
+        android:layout_marginTop="60px"
+        android:text="Jornada"
+        android:textColor="#F8180101"
+        android:textSize="26sp"
+        android:textStyle="italic" />
+
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="273dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="180px"
+        android:layout_marginTop="100px"
+        android:background="#D4A3EF"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Ok"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="273dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="180px"
+        android:layout_marginTop="50px"
+        android:background="#D4A3EF"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Voltar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp" />
+
+</LinearLayout>

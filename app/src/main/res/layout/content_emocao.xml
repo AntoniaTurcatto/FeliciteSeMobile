@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0D5"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".EmocaoActivity"
+    tools:showIn="@layout/activity_emocao">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="50px"
+        android:text="Como você está se sentindo hoje?"
+        android:textColor="#F3130000"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnAtribuirEmocao"
+        android:layout_width="395dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="50px"
+        android:background="#D4A3EF"
+        android:text="Atribuir emoção diária"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FD1B0202"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnVerJornada"
+        android:layout_width="395dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="20px"
+        android:background="#D4A3EF"
+        android:text="Ver jornada"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FC0F0909"
+        android:textSize="20sp" />
+</LinearLayout>

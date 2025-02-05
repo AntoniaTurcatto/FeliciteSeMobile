@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data do Evento:" />
+    <EditText
+        android:id="@+id/dataEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a data (DD/MM/AAAA)" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Local do Evento:" />
+    <EditText
+        android:id="@+id/localEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o local" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Responsável pelo Evento:" />
+    <EditText
+        android:id="@+id/responsavelEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o responsável" />
+
+    <Button
+        android:id="@+id/bCadastrarEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+</LinearLayout>

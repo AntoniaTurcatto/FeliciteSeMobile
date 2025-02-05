@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Link da Página Web:" />
+    <EditText
+        android:id="@+id/linkPaginaWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o link" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autor da Página:" />
+    <EditText
+        android:id="@+id/autorPaginaWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o autor" />
+
+    <Button
+        android:id="@+id/bCadastrarPaginaWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+</LinearLayout>

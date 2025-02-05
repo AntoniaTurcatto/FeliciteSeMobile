@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editora:" />
+    <EditText
+        android:id="@+id/editoraLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a editora" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ano de Publicação:" />
+    <EditText
+        android:id="@+id/anoLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o ano" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número de Páginas:" />
+    <EditText
+        android:id="@+id/paginasLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o número de páginas" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autor:" />
+    <EditText
+        android:id="@+id/autorLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o autor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gênero:" />
+    <EditText
+        android:id="@+id/generoLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o gênero" />
+
+    <ImageView
+        android:id="@+id/imagemLivro"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/bAdicionarImagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Imagem" />
+
+    <Button
+        android:id="@+id/bCadastrarLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+</LinearLayout>

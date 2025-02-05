@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0D5"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RegistrarEmocaoActivity"
+    tools:showIn="@layout/activity_registrar_emocao">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="50px"
+        android:text="Como você está se sentindo hoje?"
+        android:textColor="#F3130000"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnRegistraEmocao"
+        android:layout_width="312dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="120px"
+        android:layout_marginTop="900px"
+        android:background="#D4A3EF"
+        android:text="Registrar Emoção"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FD1B0202"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="312dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="120px"
+        android:layout_marginTop="20px"
+        android:background="#D4A3EF"
+        android:text="Voltar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FC0F0909"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvRadiante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="97px"
+        android:layout_marginTop="-1050px"
+        android:text="Radiante"
+        android:textColor="#F7130202" />
+
+    <TextView
+        android:id="@+id/tvFeliz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="490px"
+        android:layout_marginTop="-50px"
+        android:text="Feliz"
+        android:textColor="#FA0A0101" />
+
+    <TextView
+        android:id="@+id/tvNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="830px"
+        android:layout_marginTop="-50px"
+        android:text="Normal"
+        android:textColor="#180101" />
+
+    <TextView
+        android:id="@+id/tvTriste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300px"
+        android:layout_marginTop="220px"
+        android:text="Triste"
+        android:textColor="#130101" />
+
+    <TextView
+        android:id="@+id/tvMuitoMal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="630px"
+        android:layout_marginTop="-50px"
+        android:text="Muito mal"
+        android:textColor="#FD180202" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-250px"
+        android:layout_marginTop="-520px"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-25px"
+        android:layout_marginTop="-190px"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="700px"
+        android:layout_marginTop="-185px"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="163dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="140px"
+        android:layout_marginTop="80px"
+        android:layout_marginRight="230px"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="350px"
+        android:layout_marginTop="-180px"
+        app:srcCompat="@mipmap/ic_launcher" />
+</LinearLayout>

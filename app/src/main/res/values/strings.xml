@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">DireitoAFelicidade</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_cadastro">CadastroActivity</string>
+    <string name="title_activity_recuperar_senha">RecuperarSenhaActivity</string>
+    <string name="title_activity_configuracao">ConfiguracaoActivity</string>
+    <string name="title_activity_emocao">EmocaoActivity</string>
+    <string name="title_activity_categoria">CategoriaActivity</string>
+    <string name="title_activity_registra_emocao">RegistraEmocaoActivity</string>
+    <string name="title_activity_registrar_emocao">RegistrarEmocaoActivity</string>
+    <string name="title_activity_jornada">JornadaActivity</string>
+    <string name="title_activity_sobre">SobreActivity</string>
+    <string name="title_activity_fale_conosco">FaleConoscoActivity</string>
+    <string name="title_activity_youtube_detalhado">YoutubeDetalhadoActivity</string>
+    <string name="title_activity_livros_detalhado">LivrosDetalhadoActivity</string>
+    <string name="title_activity_site_detalhado">SiteDetalhadoActivity</string>
+    <string name="title_activity_artigo_detalhado">ArtigoDetalhadoActivity</string>
+    <string name="title_activity_aplicativo_detalhado">AplicativoDetalhadoActivity</string>
+    <string name="title_activity_tela_sites">TelaSites</string>
+    <string name="title_activity_sites__detalhado">Sites_Detalhado</string>
+    <string name="title_activity_site__detalhado">Site_Detalhado</string>
+    <string name="title_activity_tela_livros">TelaLivros</string>
+    <string name="title_activity_tela_aplicativos">TelaAplicativosActivity</string>
+    <string name="title_activity_tela_artigos">TelaArtigos</string>
+    <string name="title_activity_tela_filmes">TelaFilmesActivity</string>
+    <string name="title_activity_filme_detalhado">FilmeDetalhadoActivity</string>
+    <string name="title_activity_tela_youtube">TelaYoutubeActivity</string>
+    <string name="title_activity_tela_series">TelaSeries</string>
+    <string name="title_activity_tela_eventos">TelaEventosActivity</string>
+    <string name="title_activity_eventos_detalhado">EventosDetalhadoActivity</string>
+    <string name="title_activity_filtrar_tematicas">FiltrarTematicasActivity</string>
+    <string name="title_activity_serie_detalhada">SerieDetalhadaActivity</string>
+</resources>

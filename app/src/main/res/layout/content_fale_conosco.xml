@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0D5"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".FaleConoscoActivity"
+    tools:showIn="@layout/activity_fale_conosco">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="325px"
+        android:layout_marginTop="60px"
+        android:text="Fale Conosco"
+        android:textColor="#F8180101"
+        android:textSize="26sp"
+        android:textStyle="italic" />
+
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="273dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="180px"
+        android:layout_marginTop="1000px"
+        android:background="#D4A3EF"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Enviar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btnCancela"
+        android:layout_width="273dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="180px"
+        android:layout_marginTop="50px"
+        android:background="#D4A3EF"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#FFFFFF"
+        android:text="Cancelar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp" />
+
+    <RadioButton
+        android:id="@+id/rbIdentificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="-800px"
+        android:background="#00FFFFFF"
+        android:text="Quero me identificar"
+        android:textColor="#F80E0101"
+        android:textSize="20sp" />
+</LinearLayout>
