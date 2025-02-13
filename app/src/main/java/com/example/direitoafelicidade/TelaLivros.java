@@ -22,6 +22,9 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import modelDominio.Livro;
 import modelDominio.Tematica;
@@ -114,10 +117,24 @@ public class TelaLivros extends AppCompatActivity {
             it.putExtra("tematicasLivro", nomeTematica);
 
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            livro.getCapaLivro().compress(Bitmap.CompressFormat.PNG, 100, stream);
+            livro.getCapaLivro().compress(Bitmap.CompressFormat.JPEG, 100, stream);
             byte[] img = stream.toByteArray();
+            File file = new File(getApplicationContext().getCacheDir(), "tempfile");
+            try (FileOutputStream fos = new FileOutputStream(file)){
+                fos.write(img);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
 
-            it.putExtra("imagemLivro", img);
+
+
+
+            try {
+                stream.close();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+            it.putExtra("imagemLivro", file.getAbsolutePath());
 
             startActivity(it);
 

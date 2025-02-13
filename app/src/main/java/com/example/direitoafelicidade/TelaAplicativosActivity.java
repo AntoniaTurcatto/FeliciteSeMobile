@@ -24,6 +24,9 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import modelDominio.Aplicativo;
@@ -94,13 +97,29 @@ public class TelaAplicativosActivity extends AppCompatActivity {
             Aplicativo app = listaAplicativos.get(position);
 
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            app.getLogoAplicativo().compress(Bitmap.CompressFormat.PNG, 100, stream);
+            app.getLogoAplicativo().compress(Bitmap.CompressFormat.JPEG, 100, stream);
             byte[] imgByte = stream.toByteArray();
+            File file = new File(getApplicationContext().getCacheDir(), "tempfile");
+            try (FileOutputStream fos = new FileOutputStream(file)){
 
-            Aplicativo aplicativo = new Aplicativo(app.getCodConteudo(), app.getNomeConteudo(), app.getDescricaoConteudo(), app.getDescricaoIndicacao(), app.getLinkAplicativo(), imgByte,  app.getDesenvolvedorAplicativo(), app.getGratisAplicativo(), app.getTematicas());
+                 fos.write(imgByte);
+
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
 
             Intent it = new Intent(TelaAplicativosActivity.this, AplicativoDetalhadoActivity.class);
-            it.putExtra("aplicativo",aplicativo);
+            it.putExtra("codConteudo", app.getCodConteudo());
+            it.putExtra("nomeConteudo", app.getNomeConteudo());
+            it.putExtra("descConteudo",app.getDescricaoConteudo());
+            it.putExtra("descIndi",app.getDescricaoIndicacao());
+            it.putExtra("link",app.getLinkAplicativo());
+            it.putExtra("filepath", file.getAbsolutePath());
+            it.putExtra("dev",app.getDesenvolvedorAplicativo());
+            it.putExtra("gratis",app.getGratisAplicativo());
+            it.putExtra("tematicas",app.getTematicas());
+            //it.putExtra("aplicativo",aplicativo);
             startActivity(it);
 
         }

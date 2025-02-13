@@ -20,6 +20,9 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import modelDominio.CanalYoutube;
 
@@ -88,14 +91,24 @@ public class TelaYoutubeActivity extends AppCompatActivity {
             Log.d("Posição: ", canais.get(position).toString());
 
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            canalYoutube.getCapaCanal().compress(Bitmap.CompressFormat.PNG, 100, stream);
+            canalYoutube.getCapaCanal().compress(Bitmap.CompressFormat.JPEG, 100, stream);
             byte[] img = stream.toByteArray();
-
-            //crindo outro objeto para a capa como byte[]
-            CanalYoutube canalYoutubeComImgByte = new CanalYoutube(canalYoutube.getCodConteudo(), canalYoutube.getNomeConteudo(), canalYoutube.getDescricaoConteudo(), canalYoutube.getDescricaoIndicacao(), canalYoutube.getLinkCanal(), canalYoutube.getTematicas(), img);
+            File file = new File(getApplicationContext().getCacheDir(), "filepath");
+            try(FileOutputStream fos = new FileOutputStream(file)){
+                fos.write(img);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
 
             Intent it = new Intent(TelaYoutubeActivity.this, YoutubeDetalhadoActivity.class);
-            it.putExtra("canal",canalYoutubeComImgByte);
+            //it.putExtra("canal",canalYoutubeComImgByte);
+            it.putExtra("codConteudo", canalYoutube.getCodConteudo());
+            it.putExtra("nomeConteudo", canalYoutube.getNomeConteudo());
+            it.putExtra("descConteudo", canalYoutube.getDescricaoConteudo());
+            it.putExtra("descIndi", canalYoutube.getDescricaoIndicacao());
+            it.putExtra("link", canalYoutube.getLinkCanal());
+            it.putExtra("tematicas", canalYoutube.getTematicas());
+            it.putExtra("filepath", file.getAbsolutePath());
             startActivity(it);
 
         }

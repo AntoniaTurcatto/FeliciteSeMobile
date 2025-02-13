@@ -42,7 +42,7 @@ import modelDominio.Usuario;
 import modelDominio.Livro;
 
 public class WebServiceController extends AppCompatActivity {
-    String urlWebServicesDesenvolvimento = "http://192.168.0.111:80/tonia/projetoAndroidWebService/projetoAndroid/";// O número deve ser o IPV4 de cada um
+    String urlWebServicesDesenvolvimento = "http://192.168.0.111:80/tonia/webservices/Felicite-se/projetoAndroidWebService/projetoAndroid/";// O número deve ser o IPV4 de cada um
     ArrayList<CanalYoutube> listaYoutube;
     ArrayList<PaginaWeb> listaPaginasWeb;
     ArrayList<Serie> listaSeries;

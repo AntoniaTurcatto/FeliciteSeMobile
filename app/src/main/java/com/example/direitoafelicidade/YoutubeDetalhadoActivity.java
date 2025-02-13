@@ -9,6 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import modelDominio.CanalYoutube;
 import modelDominio.Tematica;
 
@@ -34,9 +41,33 @@ public class YoutubeDetalhadoActivity extends AppCompatActivity {
 
         Intent it = getIntent();
 
-        if(it != null && it.hasExtra("canal"))
+        if(it != null && it.hasExtra("filepath"))
         {
-            CanalYoutube canalYoutube = (CanalYoutube) it.getSerializableExtra("canal");
+            int codConteudo = it.getIntExtra("codConteudo",0);
+            String nomeConteudo = it.getStringExtra("nomeConteudo");
+            String descConteudo = it.getStringExtra("descConteudo");
+            String descIndi = it.getStringExtra("descIndi");
+            String link = it.getStringExtra("link");
+            ArrayList<Tematica> tematicas = (ArrayList<Tematica>) it.getSerializableExtra("tematicas");
+            String filepath = it.getStringExtra("filepath");
+
+            byte[] img = {0};
+            File file = new File(filepath);
+            try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file))){
+                img = new byte[(int)file.length()];
+                bis.read(img);
+
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+
+            CanalYoutube canalYoutube = new CanalYoutube(codConteudo,
+                    nomeConteudo,
+                    descConteudo,
+                    descIndi,
+                    link,
+                    tematicas,
+                    img);
             tvDetalhadoNomeCanal.setText(canalYoutube.getNomeConteudo());
             Log.d("DentroDetalhado", canalYoutube.getLinkCanal());
             tvDetalhadoDescricaoCanal.setText(canalYoutube.getDescricaoConteudo());

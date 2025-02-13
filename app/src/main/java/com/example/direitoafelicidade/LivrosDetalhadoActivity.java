@@ -9,6 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
 import modelDominio.Livro;
 
 public class LivrosDetalhadoActivity extends AppCompatActivity {
@@ -47,11 +52,23 @@ public class LivrosDetalhadoActivity extends AppCompatActivity {
             tvDetalhadoDescricaoLivro.setText(it.getStringExtra("descricaoConteudoLivro"));
             tvDetalhadoIndicacaoLivro.setText(it.getStringExtra("descricaoIndicacao"));
             tvDetalhadoTematicaLivro.setText(it.getStringExtra("tematicasLivro"));
+            byte[] imagemByte;
+            String filePath = getIntent().getStringExtra("imagemLivro");
+            File file = new File(filePath);
+            try (FileInputStream fis = new FileInputStream(file)){
+                imagemByte = new byte[(int)file.length()];
+                fis.read(imagemByte);
+                Bitmap imagemBitmap = BitmapFactory.decodeByteArray(imagemByte, 0, imagemByte.length);
+                ivDetalhadoCapaLivro.setImageBitmap(imagemBitmap);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
 
-            byte[] imagemByte = it.getByteArrayExtra("imagemLivro");
-            Bitmap imagemBitmap = BitmapFactory.decodeByteArray(imagemByte, 0, imagemByte.length);
 
-            ivDetalhadoCapaLivro.setImageBitmap(imagemBitmap);
+
+
+
+
             /*
             Livro livro = (Livro) it.getSerializableExtra("livro");
             Log.d("agoraDetalhe", livro.toString());

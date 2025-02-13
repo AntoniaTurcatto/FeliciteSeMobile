@@ -9,6 +9,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import modelDominio.Filme;
 import modelDominio.Tematica;
 
@@ -37,9 +43,29 @@ public class FilmeDetalhadoActivity extends AppCompatActivity {
 
         Intent it = getIntent();
 
-        if(it != null && it.hasExtra("filmeImgByte"))
+        if(it != null && it.hasExtra("codConteudo"))
         {
-            Filme filme = (Filme) it.getSerializableExtra("filmeImgByte");
+            int codConteudo = it.getIntExtra("codConteudo",0);
+            String nomeConteudo = it.getStringExtra("nomeConteudo");
+            String descConteudo = it.getStringExtra("descConteudo");
+            String sinopse = it.getStringExtra("sinopse");
+            String descIndi = it.getStringExtra("descIndi");
+            int duracao = it.getIntExtra("duracao",90);
+            int ano = it.getIntExtra("ano", 0);
+            String plat = it.getStringExtra("plat");
+            ArrayList<Tematica> tematicas = (ArrayList<Tematica>)it.getSerializableExtra("tematicas");
+            String filepath = it.getStringExtra("filepath");
+
+            File file = new File(filepath);
+            byte[] img ={0};
+            try (FileInputStream fis = new FileInputStream(file)){
+                img = new byte[(int)file.length()];
+                fis.read(img);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Filme filme = new Filme(codConteudo, nomeConteudo, descConteudo, descIndi, img, sinopse, duracao, ano, plat, tematicas);
             tvDetalhadoNomeFilme.setText(filme.getNomeConteudo());
             tvDetalhadoAnoFilme.setText(String.valueOf(filme.getAnoLancamentoFilme()));
             tvDetalhadoDuracaoFilme.setText(String.valueOf(filme.getDuracaoFilme()));

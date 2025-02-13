@@ -30,6 +30,9 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import modelDominio.Livro;
@@ -87,13 +90,31 @@ public class TelaSeries extends AppCompatActivity {
             Serie serie = listaSeries.get(position);
 
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            serie.getCapaSerie().compress(Bitmap.CompressFormat.PNG, 100, stream);
+            serie.getCapaSerie().compress(Bitmap.CompressFormat.JPEG, 100, stream);
             byte[] capaSerieByte = stream.toByteArray();
-
-            Serie serieImagemByte = new Serie(serie.getCodConteudo(), serie.getNomeConteudo(), serie.getDescricaoConteudo(), serie.getDescricaoIndicacao(), capaSerieByte, serie.getSinopseSerie(), serie.getTemporadaSerie(), serie.getAnoLancamentoSerie(), serie.getPlataformaSerie(), serie.getTematicas());
+            File file = new File(getApplicationContext().getCacheDir(), "tempfile");
+            try(FileOutputStream fos = new FileOutputStream(file)){
+                fos.write(capaSerieByte);
+                Log.d("tamanho do arquivo: ",String.valueOf(file.length()));
+                stream.close();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
 
             Intent it = new Intent(TelaSeries.this, SerieDetalhadaActivity.class);
-            it.putExtra("serie", serieImagemByte);
+
+            it.putExtra("codConteudo",serie.getCodConteudo());
+            it.putExtra("nomeConteudo", serie.getNomeConteudo());
+            it.putExtra("descConteudo", serie.getDescricaoConteudo());
+            it.putExtra("descIndi", serie.getDescricaoIndicacao());
+            it.putExtra("filepath", file.getAbsolutePath());
+            it.putExtra("sinopse", serie.getSinopseSerie());
+            it.putExtra("duracao", serie.getTemporadaSerie());
+            it.putExtra("ano", serie.getAnoLancamentoSerie());
+            it.putExtra("plat", serie.getPlataformaSerie());
+            it.putExtra("tematicas", serie.getTematicas());
+
+            //it.putExtra("serie", serieImagemByte);
             startActivity(it);
 
         }

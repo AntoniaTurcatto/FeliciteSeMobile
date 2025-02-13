@@ -27,6 +27,9 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import modelDominio.Filme;
@@ -96,15 +99,30 @@ public class TelaFilmesActivity extends AppCompatActivity {
 
 
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            filme.getCapaFilme().compress(Bitmap.CompressFormat.PNG, 100, stream);
+            filme.getCapaFilme().compress(Bitmap.CompressFormat.JPEG, 100, stream);
             byte[] img = stream.toByteArray();
+            File file = new File(getApplicationContext().getCacheDir(), "tempdir");
 
-            Filme filmeImgByte = new Filme(filme.getCodConteudo(), filme.getNomeConteudo(), filme.getDescricaoConteudo(), filme.getDescricaoIndicacao(), img, filme.getSinopseFilme(), filme.getDuracaoFilme(), filme.getAnoLancamentoFilme(), filme.getPlataformaFilme(), filme.getTematicas());
+            try(FileOutputStream fos = new FileOutputStream(file)){
+                fos.write(img);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
 
             Intent it = new Intent(TelaFilmesActivity.this, FilmeDetalhadoActivity.class);
 
 
-            it.putExtra("filmeImgByte", filmeImgByte);
+            it.putExtra("codConteudo", filme.getCodConteudo());
+            it.putExtra("nomeConteudo", filme.getNomeConteudo());
+            it.putExtra("descConteudo",filme.getDescricaoConteudo() );
+            it.putExtra("filepath", file.getAbsolutePath());
+            it.putExtra("sinopse", filme.getSinopseFilme());
+            it.putExtra("descIndi", filme.getDescricaoIndicacao());
+            it.putExtra("duracao", filme.getDuracaoFilme());
+            it.putExtra("ano",filme.getAnoLancamentoFilme());
+            it.putExtra("plat", filme.getPlataformaFilme());
+            it.putExtra("tematicas", filme.getTematicas());
+
             startActivity(it);
 
         }
