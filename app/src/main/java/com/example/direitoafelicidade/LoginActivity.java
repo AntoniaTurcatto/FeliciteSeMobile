@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         @Override
                         public void onError(String message) {
-
+                            Toast.makeText(LoginActivity.this, "Usuário ou senha inválido", Toast.LENGTH_SHORT).show();
                         }
                     });
 

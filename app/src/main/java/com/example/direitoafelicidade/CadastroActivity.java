@@ -35,7 +35,7 @@ public class CadastroActivity extends AppCompatActivity {
     Button btnCadastro;
     EditText edtConfirmarSenha, edtSenha, edtEmail, edtNome;
     RadioGroup rgSexo, rgAluno;
-    RadioButton rbFem, rbMasc, rbOutro, rbSim, rbNao;
+    RadioButton rbFem, rbMasc, rbOutro, rbEstudante, rbServidor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +54,8 @@ public class CadastroActivity extends AppCompatActivity {
         rbFem = findViewById(R.id.rbFem);
         rbMasc = findViewById(R.id.rbMasc);
         rbOutro = findViewById(R.id.rbOutro);
-        rbSim = findViewById(R.id.rbSim);
-        rbNao = findViewById(R.id.rbNao);
+        rbEstudante = findViewById(R.id.rbEstudante);
+        rbServidor = findViewById(R.id.rbServidor);
 
 
 
@@ -66,7 +66,7 @@ public class CadastroActivity extends AppCompatActivity {
                 {
                     if(rbMasc.isChecked() || rbFem.isChecked() || rbOutro.isChecked())
                     {
-                        if(rbSim.isChecked() || rbNao.isChecked())
+                        if(rbServidor.isChecked() || rbEstudante.isChecked())
                         {
                             if(!edtEmail.getText().toString().equals(""))
                             {
@@ -76,24 +76,24 @@ public class CadastroActivity extends AppCompatActivity {
                                     int sexo;
                                     if(rbMasc.isChecked())
                                     {
-                                        sexo = 1;
+                                        sexo = 0;
                                     }
                                     else if(rbFem.isChecked())
                                     {
-                                        sexo = 2;
+                                        sexo = 1;
                                     }
                                     else
                                     {
-                                        sexo = 3;
+                                        sexo = 2;
                                     }
                                     int ifParticipante;
-                                    if(rbSim.isChecked())
+                                    if(rbServidor.isChecked())
                                     {
                                         ifParticipante = 1;
                                     }
                                     else
                                     {
-                                        ifParticipante = 2;
+                                        ifParticipante = 0;
                                     }
 
                                     String email = edtEmail.getText().toString();

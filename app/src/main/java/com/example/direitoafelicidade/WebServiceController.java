@@ -108,10 +108,13 @@ public class WebServiceController extends AppCompatActivity {
                                 volleyResponseListner.onResponse(usuarioLogado);
 
 
+                            } else {
+                                Toast.makeText(context, "Usuário ou senha inválido", Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (Exception e) {
                             Log.v("LogLogin", e.getMessage());
+                            volleyResponseListner.onResponse(null);
                         }
                     }
                 },
@@ -189,6 +192,10 @@ public class WebServiceController extends AppCompatActivity {
                 params.put("tipoUsuario", String.valueOf(usuario.getTipoUsuario()));
                 params.put("emailUsuario", usuario.getEmailUsuario());
                 params.put("senhaUsuario", usuario.getSenhaUsuario());
+//                params.put("mEstudante", usuario.getM); NAO EXISTEM NA CLASSE
+//                params.put("mServidor");
+//                params.put("cargoServidor");
+//                params.put("siape");
                 return params;
             }
         };
